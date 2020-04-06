@@ -58,7 +58,7 @@ Plus, you can choose which CSS loader to use; we're not reinventing the wheel he
 
 ## Hey buddy I am a theme creator, how should I support Glasscord in my own themes?
 Glasscord will look for some CSS properties defined in the `:root` CSS selector.
-Please take a look at the style.css file to better understand how they are used.
+Please take a look at the `glasscord_example_theme.css` file to better understand how they are used.
 
 Here's a straightforward CSS properties explaination. Let's go through them one by one; shall we?
 
