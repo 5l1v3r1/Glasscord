@@ -22,8 +22,11 @@ It seemed that a few people liked the idea, so I made that into an actual tool f
 _TL;DR: Help me I have no purpose in this life anymore_
 
 ## Is it compatible with _[name of random Discord plugin loader here]_?
-If installed properly, Glasscord won't interfere with plugin loaders.
+If installed properly, Glasscord won't interfere with any modern plugin loaders.
 In fact, I tested it with EnhancedDiscord and it works flawlessly!
+
+**Note:** Someone reported that BetterDiscord installs are a little bit trickier to get working with Glasscord.
+Please follow the instructions carefully and please install Glasscord AFTER installing BetterDiscord!
 
 ## How do I install it?
 Well, glad you asked!
@@ -55,6 +58,9 @@ Well, glad you asked!
 ## How do I USE it?
 Glasscord alone won't do anything to your Discord client. You WILL need a CSS loader at least to be able to use Glasscord.
 Plus, you can choose which CSS loader to use; we're not reinventing the wheel here.
+
+We recommend to install our modified CSS Loader for EnhancedDiscord, so please get it first, then override
+the `css_loader.js` file on ED's plugins directory with the one on this repository!
 
 ## Hey buddy I am a theme creator, how should I support Glasscord in my own themes?
 Glasscord will look for some CSS properties defined in the `:root` CSS selector.
