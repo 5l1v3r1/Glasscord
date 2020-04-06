@@ -9,6 +9,8 @@ Providing composition effects to the Discord client.
 Glasscord is a really simple tool that enables window composition effects (transparency and frosted glass effects) on Discord.
 
 It is compatible with Windows, Linux and macOS.
+**Note:** macOS compatibility is still tricky and the blurriness will only work at times.
+I don't own a Mac so I can't look into fixing it personally. Contributions are very welcome.
 
 ## So, is it a theme?
 Glasscord is NOT a theme. It's a tool that enables themes to request composition effects.
