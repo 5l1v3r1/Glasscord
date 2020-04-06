@@ -59,6 +59,8 @@ Well, glad you asked!
 Glasscord alone won't do anything to your Discord client. You WILL need a CSS loader at least to be able to use Glasscord.
 Plus, you can choose which CSS loader to use; we're not reinventing the wheel here.
 
+You then have to make or find a compatible theme to have the blur effect. If you are just trying stuff, you can load the `glasscord_example_theme.css` on your CSS loader of choice.
+
 We recommend to install our modified CSS Loader for EnhancedDiscord, so please get it first, then override
 the `css_loader.js` file on ED's plugins directory with the one on this repository!
 
