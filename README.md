@@ -3,6 +3,8 @@ Providing composition effects to the Discord client.
 
 [Chat with us on Discord](https://discord.gg/SftnByN)
 
+![Preview](preview.png)
+
 ## What's it?
 Glasscord is a really simple tool that enables window composition effects (transparency and frosted glass effects) on Discord.
 
