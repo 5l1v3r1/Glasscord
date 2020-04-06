@@ -385,7 +385,7 @@ class BrowserWindow extends electron.BrowserWindow {
 	
 	_glasscord_linux_requestBlur(mode){
 		if(process.env.XDG_SESSION_TYPE == 'x11'){
-			let bashCommand = `xprop -id $(xprop -root -notype | awk '$1=="_NET_SUPPORTING_WM_CHECK:"\{print $5\}') -notype -f _NET_WM_NAME 8t | grep "_NET_WM_NAME = " | cut --delimiter=' ' --fields=3 | cut --delimiter='"' --fields=2`;
+			const bashCommand = `xprop -id $(xprop -root -notype | awk '$1=="_NET_SUPPORTING_WM_CHECK:"\{print $5\}') -notype -f _NET_WM_NAME 8t | grep "_NET_WM_NAME = " | cut --delimiter=' ' --fields=3 | cut --delimiter='"' --fields=2`;
 			let execFile = require('child_process').execFile;
 			execFile('bash', ['-c',bashCommand], (error,stdout,stderr) => {
 				if(error) return;
@@ -405,9 +405,9 @@ class BrowserWindow extends electron.BrowserWindow {
 	_glasscord_linux_kwin_requestBlur(mode){
 		if(process.env.XDG_SESSION_TYPE != 'x11') return;
 		
-		let xid = this.getNativeWindowHandle().readUInt32LE().toString(16);
-		let remove = 'xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -remove _KDE_NET_WM_BLUR_BEHIND_REGION -id 0x' + xid;
-		let request = 'xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id 0x' + xid;
+		const xid = this.getNativeWindowHandle().readUInt32LE().toString(16);
+		const remove = 'xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -remove _KDE_NET_WM_BLUR_BEHIND_REGION -id 0x' + xid;
+		const request = 'xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id 0x' + xid;
 		
 		let sys = require('sys')
 		let exec = require('child_process').exec;
