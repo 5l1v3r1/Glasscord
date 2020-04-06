@@ -32,7 +32,7 @@
 	
 	/* macOS-specific properties */
 	/* Vibrancy mode */
-	--glasscord-macos-vibrancy: window;
+	--glasscord-macos-vibrancy: hud;
 	
 	/* Linux-specific properties */
 	/* Should Glasscord send a request to your window compositor to blur behind Discord's window? */

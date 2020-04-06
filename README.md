@@ -8,7 +8,7 @@ Providing composition effects to the Discord client.
 ## What's it?
 Glasscord is a really simple tool that enables window composition effects (transparency and frosted glass effects) on Discord.
 
-It is compatible with Windows and Linux and it *should* be compatible with macOS too.
+It is compatible with Windows, Linux and macOS.
 
 ## So, is it a theme?
 Glasscord is NOT a theme. It's a tool that enables themes to request composition effects.
@@ -93,11 +93,23 @@ there was really no other choice but to implement it.
 
 Let's hope for Microsoft to fix this bug in upcoming Windows releases.
 
-### `--glasscord-macos-vibrancy` (macOS | UNTESTED)
-#### accepts a value between those ones: `titlebar`, `selection`, `menu`, `popover`, `sidebar`, `header`, `sheet`, `window`, `hud`, `fullscreen-ui`, `tooltip`, `content`, `under-window`, `under-page`, `none`; defaults to `window`
+### `--glasscord-macos-vibrancy` (macOS)
+#### accepts a value between those ones: `titlebar`, `selection`, `menu`, `popover`, `sidebar`, `header`, `sheet`, `window`, `hud`, `fullscreen-ui`, `tooltip`, `content`, `under-window`, `under-page`, `none`; defaults to `none`
 Sets the vibrancy effects to be used with the Discord window.
 
-If set to `none`, the vibrancy effect will not be applied.
+If set to `none`, the vibrancy effect will not be applied but the window will be blurred anyway.
+
+@Giovix92 did some testing for you guys, and he made this handy dandy chart to pick vibrancy effects
+
+| Vibrancy mode                                 | Slight description                                           |
+|-----------------------------------------------|--------------------------------------------------------------|
+| fullscreen-ui, titlebar, menu, popover, sheet | Reference vibrancy, works in maximized and minimized windows |
+| selection                                     | Has kind of a bright tint to it                              |
+| hud                                           | The one with the most contrast and vibrancy                  |
+| header                                        | It won't work in fullscreen, and it's slightly darker        |
+| tooltip, sidebar                              | Darker than the reference vibrancy                           |
+| under-window                                  | The darkest of them all                                      |
+| under-page, window, content                   | Won't show any sign of blurring                              |
 
 ### `--glasscord-linux-blur` (Linux)
 #### accepts a `bool`; defaults to `true`

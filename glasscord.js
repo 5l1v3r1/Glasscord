@@ -81,7 +81,7 @@ class BrowserWindow extends electron.BrowserWindow {
 		
 		if(process.platform == 'darwin'){
 			// Mac-only properites
-			this._glasscord_macos_vibrancy = 'window'; // Vibrancy
+			this._glasscord_macos_vibrancy = null; // Vibrancy
 		}
 
 		// Let's register our event listeners now.
@@ -313,11 +313,11 @@ class BrowserWindow extends electron.BrowserWindow {
 		if(process.platform == 'darwin'){
 			promises.push(this._glasscord_getCssProp('--glasscord-macos-vibrancy').then(vibrancy => {
 				if(vibrancy != null){
-					if(vibrancy == "none") this._glasscord_macos_vibrancy = '';
+					if(vibrancy == "none") this._glasscord_macos_vibrancy = null;
 					else this._glasscord_macos_vibrancy = vibrancy;
 					return;
 				}
-				this._glasscord_macos_vibrancy = 'window';
+				this._glasscord_macos_vibrancy = null;
 			}));
 		}
 		
